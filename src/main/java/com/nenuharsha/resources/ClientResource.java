@@ -37,7 +37,7 @@ public class ClientResource {
     @GET
     @Path("/{code}")
     @Produces(MediaType.APPLICATION_JSON)
-//    In multithreaded environment
+//    In multithreaded environment just for practice
 //    public Response viewIFSCDetails(@PathParam("code") String code) throws ExecutionException, InterruptedException {
 //        try{
 //            CompletableFuture<IFSC> future = CompletableFuture.supplyAsync(new Supplier<IFSC>() {
