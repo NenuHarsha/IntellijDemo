@@ -59,7 +59,6 @@ public class ClientResource {
     public Response viewIFSCDetails(@PathParam("code") String code){
         WebTarget webTarget = client.target("https://ifsc.razorpay.com/"+code);
         IFSC details = webTarget.request(MediaType.APPLICATION_JSON_TYPE).get(IFSC.class);
-        System.out.println("####################################"+Thread.currentThread().getName());
         return Response.status(Response.Status.OK).entity(details).build();
     }
 
